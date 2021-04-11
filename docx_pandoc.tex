@@ -1,0 +1,156 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{}
+
+\begin{document}
+
+A Word template for Tektonika
+
+A. Firstauthor\textsuperscript{1}, B. Secondauthor\textsuperscript{2}, C. Thirdauthor\textsuperscript{1,2}, and D. Relegated\textsuperscript{2}
+
+\textsuperscript{1}Department of Earth Sciences, A University, Acity, UK. afirstauthor@auniversity.ac.uk
+
+\textsuperscript{2}School of Earth Sciences, Another University, Bcity, Norway.
+
+\hypertarget{abstract}{%
+\section{Abstract}\label{abstract}}
+
+This is the abstract of a scientific paper. The methods are described in sufficient detail for the work to be reproduced. The software used in analyses is open source and the data are archived with well-curated metadata.
+
+\hypertarget{second-language-abstract}{%
+\section{\texorpdfstring{Second-language abstract }{Second-language abstract }}\label{second-language-abstract}}
+
+Este es el resumen de un artículo científico. Los métodos se describen con suficiente detalle para que el trabajo sea reproducido. El software utilizado en los análisis es de código abierto y los datos se archivan con metadatos bien seleccionados.
+
+\hypertarget{introduction}{%
+\section{1 Introduction}\label{introduction}}
+
+You may be wondering, does the world really need another journal article? In this section, we will tell you why this work is in fact necessary and interesting. We will cite lots of previous literature (e.g., Einstein and Rosen, 1935) and provide an overview of where the rest of this paper is going.
+
+\hypertarget{a-subsection}{%
+\subsection{1.1 A subsection}\label{a-subsection}}
+
+Figures in this paper will not exceed 85 × 200 mm (for single column figures) or 175 × 200 mm (for two column figures). This required the authors to think a little bit in advance about the sizes and shapes of their figures, and hopefully scale things appropriately (Einstein and Rosen, 1935).
+
+Sometimes, papers contain figures. Figure 1 is an example of such a figure.
+
+\includegraphics[width=6.96806in,height=4.18056in]{media/image1.png}
+
+Figure 1. Maps of sediment thickness and Moho depth across the study region in Patagonia.
+
+\hypertarget{math}{%
+\subsubsection{1.1.1 Math!}\label{math}}
+
+Occasionally tectonics requires math. On such occasions, we include equations in our paper, like:
+
+\(\left| \nabla u\left( x \right) \right| = \ \frac{1}{f(x)},\ x \in \Omega\) (1)
+
+and sometimes equations fall in the middles of sentences, like Einstein and Rosen (1935) might do in their paper. On other occasions, tables might be included in the text of a paper. Here we include Table 1 as an example.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\textbf{Animal name} & \textbf{Number of legs} \\
+\midrule
+\endhead
+Dog & 4 \\
+Spider & 8, plus 2 pedipalps \\
+\bottomrule
+\end{longtable}
+
+Table 1. A table containing some minimally useful information about dogs and spiders.
+
+\hypertarget{author-contributions}{%
+\section{Author contributions}\label{author-contributions}}
+
+Author 1 did some stuff. Author 2 did other stuff. All authors contributed to the project in a meaningful way.
+
+\hypertarget{acknowledgements}{%
+\section{Acknowledgements}\label{acknowledgements}}
+
+Thank you to the reviewers who gave us feedback on this article, to the agencies who funded this work, and to our friends for tolerating our excessive enthusiasm about this result.
+
+\hypertarget{data-availability}{%
+\section{Data availability}\label{data-availability}}
+
+The data cited in this work are available through a repository.
+
+\hypertarget{section}{%
+\section{}\label{section}}
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+Einstein, A. and Rosen, N. (1935). The particle problem in the general theory of relativity. \emph{Physica Review}, 48(1):73. doi: 10.1103/PhysRev.48.73
+
+\end{document}

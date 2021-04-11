@@ -1,0 +1,186 @@
+\documentclass[10pt,twoside,a4paper]{article}
+
+%  EDIT THIS SECTION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Title}{A Word template for Tektonika
+} % Manuscript title goes here
+\newcommand{\shortTitle}{shorttitle} % Short title for header goes here
+\newcommand{\Author}{Author et al.\xspace} % First author goes here. Leave blank if opting for blind review.
+\newcommand{\Year}{2021} % Year goes here
+\newcommand{\vol}{Vol: 01} % Volume number goes here
+\newcommand{\doi}{\url{doi.org/10.12545/tek-01-01-01}} % DOI goes here
+\newcommand{\journal}{$\tau e\kappa\tau oni\kappa a$}
+\newcommand{\dSubmitted}{Received: 01 January 2021}
+\newcommand{\dAccepted}{Accepted: 01 February 2021}
+\newcommand{\dOnline}{Online: 15 February 2021}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%  DO NOT EDIT THIS SECTION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pdftrailerid{} %Remove ID
+\pdfsuppressptexinfo15 %Suppress PTEX.Fullbanner and info of imported PDFs
+
+\usepackage[affil-sl]{authblk}
+\setcounter{Maxaffil}{3}
+\renewcommand\Affilfont{\itshape\small}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large \sc \bfseries}
+\titleformat*{\subsection}{}
+\titleformat*{\subsubsection}{\sl}
+\renewcommand{\thesubsubsection}{\emph{\thesubsection.\arabic{subsubsection}}}
+
+\usepackage{xcolor}
+\definecolor{PUSblue}{HTML}{005FA8}
+\usepackage{hyperref} 
+\hypersetup{colorlinks = true, 
+			citecolor = PUSblue,
+			linkcolor=black,
+			urlcolor  = PUSblue}
+\urlstyle{same}
+
+\usepackage{lipsum}
+\usepackage[pangram]{blindtext}
+\usepackage{fancyhdr}
+\usepackage[french,english]{babel}
+
+\usepackage{microtype}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[]{kpfonts}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[sectionbib,elide]{natbib}
+\bibliographystyle{apalike}
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+\usepackage{float}
+%\newfloat{footnote}{hb}
+\usepackage[switch]{lineno}
+
+\usepackage[tmargin=1in,bmargin=1in,lmargin=0.9 in,rmargin=0.9in]{geometry} 
+
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont \large \sc \bfseries}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\shortTitle}
+\fancyhead[RE]{\sc \Author, \ \Year}
+\fancyhead[LO]{$\tau e\kappa\tau oni\kappa a$, \vol}
+\fancyhead[RO]{\doi}
+\rfoot{Page \thepage}
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+   \fancyhead{\includegraphics[width=\textwidth]{article_banner.png}}
+}
+\title{\Title}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  EDIT THIS SECTION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{First A Author$^{1,2}$*,
+        Second B Author$^{1}$,
+        Third Author$^{1}$, \&
+        Fourth D Author$^{1}$
+~\\$^{1}${First affiliation, university, place}
+\\$^{2}${Second affiliation, university, place}
+\\{*}Corresponding author (e-mail: authoremail@someplace.edu)}
+% Author list goes here, with affiliations defined. Corresponding author email address is defined in the same way. Leave blank if opting for blind review.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  DO NOT EDIT THIS SECTION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\date{}
+
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+\thispagestyle{firststyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  EDIT THIS SECTION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+This is the abstract of a scientific paper. The methods are described in sufficient detail for the work to be reproduced. The software used in analyses is open source and the data are archived with well-curated metadata.
+
+\begin{center} \abstractnamefont Second-language abstract \end{center}
+
+\normalfont \small 
+
+Este es el resumen de un artículo científico. Los métodos se describen con suficiente detalle para que el trabajo sea reproducido. El software utilizado en los análisis es de código abierto y los datos se archivan con metadatos bien seleccionados.
+
+
+\end{abstract}
+\vspace{5mm}
+\vspace{5mm}
+  \end{@twocolumnfalse}
+]
+\section{Introduction}
+
+You may be wondering, does the world really need another journal article? In this section, we will tell you why this work is in fact necessary and interesting. We will cite lots of previous literature \textcolor{red}{eg}\citep{EinsteinRosen1935a} and provide an overview of where the rest of this paper is going.
+
+\subsection{A subsection}
+
+Figures in this paper will not exceed 85 × 200 mm (for single column figures) or 175 × 200 mm (for two column figures). This required the authors to think a little bit in advance about the sizes and shapes of their figures, and hopefully scale things appropriately \citep{EinsteinRosen1935a}.
+
+Sometimes, papers contain figures. Figure~\ref{fig1} is an example of such a figure.
+
+\begin{figure}
+\includegraphics[width = \columnwidth]{example-image}
+\caption{Maps of sediment thickness and Moho depth across the study region in Patagonia.
+}
+\label{fig1}
+\end{figure}
+
+
+\subsubsection{Math!}
+
+Occasionally tectonics requires math. On such occasions, we include equations in our paper, like:
+
+\begin{equation}
+\left| \nabla u\left( x \right) \right| = \ \frac{1}{f(x)},\ x \in \Omega
+\label{eq1}
+\end{equation}
+
+\noindent 
+and sometimes equations fall in the middles of sentences, like Einstein and Rosen \textcolor{red}{1935} might do in their paper. On other occasions, tables might be included in the text of a paper. Here we include Table~\ref{tbl1} as an example.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lc}\hline
+\textbf{Data type} & \textbf{some numbers} \\ \hline 
+type 1 & 1 \\ 
+type 2 & 2 \\ \hline 
+\end{tabular}
+\caption{A table containing some minimally useful information about dogs and spiders.
+}
+\label{tbl1}
+\end{table}
+
+
+\section*{Author contributions}
+
+Author 1 did some stuff. Author 2 did other stuff. All authors contributed to the project in a meaningful way.
+
+\section*{Acknowledgements}
+
+Thank you to the reviewers who gave us feedback on this article, to the agencies who funded this work, and to our friends for tolerating our excessive enthusiasm about this result.
+
+\section*{Data availability}
+
+The data cited in this work are available through a repository.
+
+
+\bibliography{docx_init}
+\end{document}

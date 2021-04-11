@@ -11,7 +11,7 @@ A conda environment is a nice way to set this up.
 - convert .docx article file to latex
     - pandoc file.docx -f docx -t latex --wrap=none -s -o file_pandoc.tex
 
-- copy-paste bibliography into anystyle.io and output as bibtex, save as a .bib file
+- copy-paste bibliography from docx into anystyle.io (or run the anystyle gem locally if you're into that) and output as bibtex, save as a .bib file
     - [anystyle.io -> file_anystyle.bib]
 
 - fix anystyle bibtex file year fields and keys, make a new .bib file
