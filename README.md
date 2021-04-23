@@ -7,6 +7,8 @@
 
 A conda environment is a nice way to set this up.
 
+You will also need to have pandoc (pandoc.org/) installed for the initial conversion of the .docx file.
+
 
 ## general steps for the conversion process
 - convert .docx article file to latex
